@@ -1,0 +1,509 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from thememinister.com/Worksbot/theme/Worksbot_v2.0/form_file_upload.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Feb 2021 09:46:36 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>KLABBER | User Dashboard</title>
+    <link rel="shortcut icon" href="{% static 'user panel/images/k.png' %}" type="image/x-icon">
+    <script src="../../../../ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i', 'Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i', 'Open Sans']
+            }
+        });
+    </script>
+    <!-- START GLOBAL MANDATORY STYLE -->
+    <link href="{% static 'user panel/dist/css/base.css' %}" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- START PAGE LABEL PLUGINS -->
+    <link href="{% static 'user panel/plugins/dropzone/dropzone.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- START THEME LAYOUT STYLE -->
+    <link href="{% static 'user panel/dist/css/component_ui.min.css' %}" rel="stylesheet" type=".text/css" />
+    <link id="defaultTheme" href="{% static 'user panel/dist/css/skins/skin-dark-1.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'user panel/dist/css/custom.css' %}" rel="stylesheet" type="text/css" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper animsition">
+        <!-- Navigation -->
+        <nav class="navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="material-icons">apps</i>
+                    </button>
+                <a class="navbar-brand" href="/home">
+                    <img class="main-logo" src="{% static 'user panel/images/k10.png' %}" alt="">
+                    <!--<span>Worksbot</span>-->
+                </a>
+            </div>
+            <div class="nav-container">
+                <!-- /.navbar-header -->
+                <ul class="nav navbar-nav hidden-xs">
+
+                    <!-- /.Fullscreen -->
+
+                    <!-- /.Full page search -->
+
+                    <!--End Start dropdown menu-->
+                    <!--Start dropdown mega menu-->
+
+                    <!--End dropdown mega menu-->
+
+                </ul>
+
+                <ul class="nav navbar-top-links navbar-right">
+
+
+
+
+                    <!-- /.Dropdown -->
+
+                    <!-- /.Dropdown -->
+                    <li class="log_out">
+                        <a href="{% url 'logout' %}">
+
+                            <i class="material-icons">power_settings_new</i>
+
+                        </a>
+                    </li>
+
+                    <!-- /.Log out -->
+                </ul>
+                <!-- /.navbar-top-links -->
+            </div>
+        </nav>
+        <!-- /.Navigation -->
+        <div class="sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-heading "> <span>Main Navigation</span></li>
+                    <li class="active"><a href="/userdashboard" class="material-ripple"><i class="material-icons">home</i> DASHBOARD</a></li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">event</i>EVENT<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li class="active"><a href="/uevent">Add Event</a></li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">history</i>PAST EVENT<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/upast">Past Events</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">bookmark</i>BOOKING<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/ubookdetail">Booking Detail</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons">person</i>PROFILE<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/uprofile">Profile</a></li>
+
+                        </ul>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">lock</i>PURCHASE PLAN PAGE<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="/upurchase">Purchase Plan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">call</i>ADMIN CONTACT<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="/adminavailable">Available Admin</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">feed</i>TRENDING NEWS<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="/storyfeed">News Feed</a></li>
+                               
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons ">image</i>IMAGE GALLERY<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                               
+                                <li><a href="/eimage">Event Images</a></li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.Left Sidebar-->
+        <div class="side-bar right-bar">
+            <div class="">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs right-sidebar-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="material-icons">home</i></a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="material-icons">person_add</i></a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i class="material-icons">chat</i></a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade  in active" id="home">
+                        <ul id="styleOptions" title="switch styling">
+                            <li><b>Dark Skin</b></li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-blue.min"><img src="{% static 'user panel/dist/img/theme-color/1.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-dark.min"><img src="{% static 'user panel/dist/img/theme-color/2.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-red-light.min" class="skin-logo"><img src="{% static 'user panel/dist/img/theme-color/5.jpg' %}" alt="" /></a>
+                            </li>
+                            <li><b>Dark Skin sidebar</b></li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-default.min"><img src="{% static 'user panel/dist/img/theme-color/7.jpg' %}" alt="" /> </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-red-dark.min"><img src="{% static 'user panel/dist/img/theme-color/6.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-dark-1.min"><img src="{% static 'user panel/dist/img/theme-color/8.jpg' %}" alt="" /></a>
+                            </li>
+                            <li><b>Light Skin sidebar</b></li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-default-light.min" class="skin-logo"><img src="{% static 'user panel/dist/img/theme-color/3.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-white.min"><img src="{% static 'user panel/dist/img/theme-color/4.jpg' %}" alt="" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade " id="profile">
+                        <h3 class="sidebar-heading">Activity</h3>
+                        <div class="rad-activity-body">
+                            <div class="rad-list-group group">
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-red pull-left"><i class="fa fa-phone"></i></div>
+                                    <div class="rad-list-content"><strong>Client meeting</strong>
+                                        <div class="md-text">Meeting at 10:00 AM</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-yellow pull-left"><i class="fa fa-refresh"></i></div>
+                                    <div class="rad-list-content"><strong>Created ticket</strong>
+                                        <div class="md-text">Ticket assigned to Dev team</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-primary pull-left"><i class="fa fa-check"></i></div>
+                                    <div class="rad-list-content"><strong>Activity completed</strong>
+                                        <div class="md-text">Completed the dashboard html</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-green pull-left"><i class="fa fa-envelope"></i></div>
+                                    <div class="rad-list-content"><strong>New Invitation</strong>
+                                        <div class="md-text">Max has invited you to join Inbox</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.sidebar-menu -->
+                        <h3 class="sidebar-heading">Tasks Progress</h3>
+                        <ul class="sidebar-menu">
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task one
+                                        <span class="label label-danger pull-right">40%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 40%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task two
+                                        <span class="label label-success pull-right">20%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 20%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task Three
+                                        <span class="label label-warning pull-right">60%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 60%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task four
+                                        <span class="label label-primary pull-right">80%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-primary progress-bar-striped active" style="width: 80%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.sidebar-menu -->
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade " id="messages">
+                        <div class="message_widgets">
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Naeem Khan</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar2.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Sala Uddin</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status away pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar3.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Mozammel</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status busy pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar4.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Tanzil</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status offline pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar5.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Amir Khan</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Salman Khan</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Tahamina</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar4.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Jhon</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status offline pull-right"></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Right Sidebar -->
+        <!-- /.Navbar  Static Side -->
+        <div class="control-sidebar-bg"></div>
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <!-- main content -->
+            <div class="content">
+                <!-- Content Header (Page header) -->
+
+                <div class="content-header">
+
+                    <div class="header-title container">
+                        <h1>
+                            
+
+                    </div>
+                </div>
+                <!-- /. Content Header (Page header) -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-bd lobidrag">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4> Add Event</h4>
+                                </div>
+                            </div>
+
+                            <form action="/uevent" method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="panel-body">
+                                    <label for="exampleInput"><span class="font-style font-weight-bold">Event
+                                        Name*</span></label>
+                                    <input type="text" class="form-control" name="aeventname" id="exampleInput" aria-describedby="inputHelp" placeholder="Enter event name" required><br>
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <label for="exapleInput"><span class="font-style font-weight-bold">Event
+                                                Date*</span></label>
+                                            <input type="date" class="form-control" name="adate" id="exampleInput" aria-describedby="inputHelp" required> <br>
+                                            <label for="exampleInput"><span class="font-style font-weight-bold"> Do You Want
+                                                Categories For Tickets</span></label> &nbsp;
+                                            <input type="radio" name="acategorize" value="Yes"> Yes &nbsp; <input type="radio" name="acategorize" value="No" required> No<br>
+                                            <label for="exampleInput"><span class="font-style font-weight-bold">Maximum
+                                                Members*</span></label>
+                                            <input type="text" class="form-control" name="nomembers" id="exampleInput" aria-describedby="inputHelp" required>
+                                            <small id="inputHelp" class="form-text text-muted">Booking will be ON by
+                                            default</small><br>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="exampleInput"><span class="font-style font-weight-bold">Event
+                                                Time*</span></label>
+                                            <input type="time" class="form-control" name="atime" id="exampleInput time" aria-describedby="timeHelp" required> <br><br><br>
+                                            <label for="exapleInput"><span class="font-style font-weight-bold"><span
+                                                    class="font-style font-weight-bold">Amount to be paid by 1
+                                                    member(GBP)</span></label>
+                                            <input type="text" class="form-control" name="amountperone" id="exampleInput amount" aria-describedby="amountHelp" required>
+                                            <small id="amountHelp" class="form-text text-muted">Don't type currency
+                                            symbol</small><br>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-warning">
+                                        To make an event free just type <span class="font-style font-italic">FREE</span> in <strong>Amount to be paid by 1 member </strong> text box.
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label for="example"><span class="font-style font-weight-bold">Event
+                                            Description</span></label><br>
+                                        <textarea name="adescription"></textarea>
+
+                                    </div>
+
+                                    <script src="{% static 'user panel/ckeditor/ckeditor.js' %}"></script>
+                                    <script>
+                                        CKEDITOR.replace('adescription');
+                                    </script>
+
+                                    <div class="form-group">
+                                        <label for="exampleAddress"><span class="font-style font-weight-bold">Event
+                                            Address</span></label><br>
+                                        <div class="panel-body">
+                                            <textarea id="some-textarea" class="form-control" name="Aaddress" rows="3" placeholder="Enter event address" required></textarea><br>
+
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleimage"><span class="font-style font-weight-bold">User Image</span></label><br>
+                                            <input type="file" class="form-control" name="aimage" id="imageInput" aria-describedby="imageHelp" required><br>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleService"><span class="font-style font-weight-bold">Services</span></label>
+                                            <input type="text" class="form-control" name="aservices" id="exampleInput" aria-describedby="inputHelp" placeholder="Enter Services" required>
+                                            <small id="userhelp" class="form-text text-muted">Enter services with, seprated</small>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampletube"><span class="font-style font-weight-bold">YouTube</span></label><br>
+                                            <input type="url" class="form-control" name="youtube" id="exampleInput" aria-describedby="inputHelp" placeholder="Enter url" required>
+                                        </div>
+                                        <div class="alert alert-info">
+                                            <p><span class="font-style font-weight-bold">Don't forget to choose a feautured image for the
+                                event</span>
+                                            </p>
+                                        </div>
+                                        <div class="alert alert-danger">
+                                            <p><span class="font-style font-weight-bold">You cannot add an event because you are not subscribe
+                                any plan
+                                or your plan has been expire please purchase plan</span></p>
+                                        </div>
+                                        <center> <button type="submit" class="btn btn-danger">Save</button>
+                                            <button type="button" class="btn btn-secondary">Reset</button>
+                                        </center><br>
+
+                                    </div>
+                            </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.main content -->
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+        <!-- START CORE PLUGINS -->
+        <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script src="{% static 'user panel/plugins/jQuery/jquery-1.12.4.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'user panel/plugins/jquery-ui-1.12.1/jquery-ui.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'user panel/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'user panel/plugins/metisMenu/metisMenu.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'user panel/plugins/lobipanel/lobipanel.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'user panel/plugins/animsition/js/animsition.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'user panel/plugins/fastclick/fastclick.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'user panel/plugins/slimScroll/jquery.slimscroll.min.js' %}" type="text/javascript"></script>
+        <!-- STRAT PAGE LABEL PLUGINS -->
+        <script src="{% static 'user panel/plugins/dropzone/dropzone.min.js' %}" type="text/javascript"></script>
+        <!-- START THEME LABEL SCRIPT -->
+        <script src="{% static 'user panel/dist/js/app.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'user panel/dist/js/jQuery.style.switcher.min.js' %}" type="text/javascript"></script>
+        <script>
+            $(document).ready(function() {
+                "use strict"; // Start of use strict
+                Dropzone.options.dropzoneForm = {
+                    paramName: "file", // The name that will be used to transfer the file
+                    maxFilesize: 2, // MB
+                    dictDefaultMessage: "<i class='pe-7s-cloud-upload upload-icon'></i><strong>Drop files here or click to upload. </strong></br> (This is just a demo dropzone. Selected files are not actually uploaded.)"
+                };
+            });
+        </script>
+       
+</body>
+
+<!-- Mirrored from thememinister.com/Worksbot/theme/Worksbot_v2.0/form_file_upload.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Feb 2021 09:46:37 GMT -->
+
+</html>

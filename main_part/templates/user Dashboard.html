@@ -1,0 +1,736 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang=en>
+
+<!-- Mirrored from thememinister.com/Worksbot/theme/Worksbot_v2.0/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Feb 2021 09:45:16 GMT -->
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=description content="">
+    <meta name=author content="">
+    <title>KLABBER | USER Dashboard</title>
+    <link rel="shortcut icon" href="{% static 'admin panel/images/k.png' %}" type="image/x-icon">
+    <script src="../../../../ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i', 'Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i', 'Open Sans']
+            }
+        });
+    </script>
+    <link href="{% static 'admin panel/dist/css/base.css' %}" rel=stylesheet type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'admin panel/plugins/toastr/toastr.min.css' %}" rel=stylesheet type="text/css" />
+    <link href="{% static 'admin panel/plugins/emojionearea/emojionearea.min.css' %}" rel=stylesheet type="text/css" />
+    <link href="{% static 'admin panel/plugins/monthly/monthly.min.css' %}" rel=stylesheet type="text/css" />
+    <link href="{% static 'admin panel/plugins/amcharts/export.css' %}" rel=stylesheet type="text/css" />
+    <link href="{% static 'admin panel/dist/css/component_ui.min.css' %}" rel=stylesheet type="text/css" />
+    <link id=defaultTheme href="{% static 'admin panel/dist/css/skins/skin-dark-1.min.css' %}" rel=stylesheet type="text/css" />
+    <link href="{% static 'admin panel/dist/css/custom.css' %}" rel=stylesheet type="text/css" />
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div id=wrapper class="wrapper animsition">
+        <!-- Navigation -->
+        <nav class="navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="material-icons">apps</i>
+                    </button>
+                <a class="navbar-brand" href="/home">
+                    <img class="main-logo" src="{% static 'admin panel/dist/img/k10.png' %}" id="bg" alt="logo">
+                    <!--<span>Worksbot</span>-->
+                </a>
+            </div>
+            <div class="nav-container">
+                <!-- /.navbar-header -->
+                <ul class="nav navbar-nav hidden-xs">
+                    <li><a id="fullscreen" href="#"><i class="material-icons">fullscreen</i> </a></li>
+                    <!-- /.Fullscreen -->
+                    <li class="hidden-xs">
+                        <a class="search-trigger" href="#">
+                            <i class="material-icons">search</i>
+                        </a>
+                        <div class="fullscreen-search-overlay" id="search-overlay">
+                            <a href="#" class="fullscreen-close" id="fullscreen-close-button"><i class="ti-close"></i></a>
+                            <div id="fullscreen-search-wrapper">
+                                <form method="get" id="fullscreen-searchform">
+                                    <input type="text" value="" placeholder="Type keyword(s) here" id="fullscreen-search-input">
+                                    <i class="ti-search fullscreen-search-icon"><input value="" type="submit"></i>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Full page search -->
+
+                    <!-- /.Sidebar menu toggle icon -->
+                    <!--Start dropdown menu-->
+                    <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Klabber Corps <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--<li class="ui_popover_tooltip"></li>-->
+                            <li><a href="https://rikashrazik.github.io/rkh/">RIKASHRAZIK - CEO</a></li>
+                            <li><a href="https://shinetv.github.io/final/">SHINE T.V - CMO</a></li>
+                            <li><a href="https://rikashrazik.github.io/ashique-prabhu/">ASHIQUE PRABHU - COO</a></li>
+                            <li><a href="https://www.linkedin.com/in/ashif-arafath-m-4b7279176/">ASHIF ARAFATH - CFO</a></li>
+
+
+                    </li>
+                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Others</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"> Link 1</a></li>
+                            <li><a href="#"> Link 2</a></li>
+                            <li><a href="#"> Link 3</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Link 5.4</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"> Link 5.4.1</a></li>
+                                    <li><a href="#"> Link 5.4.2</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Link 5.4.3</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#"> Link 5.4.3.1</a></li>
+                                            <li><a href="#"> Link 5.4.3.2</a></li>
+                                            <li><a href="#"> Link 5.4.3.3</a></li>
+                                            <li><a href="#"> Link 5.4.3.4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Link 5.4.4</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#"> Link 5.4.4.1</a></li>
+                                            <li><a href="#"> Link 5.4.4.2</a></li>
+                                            <li><a href="#"> Link 5.4.4.3</a></li>
+                                            <li><a href="#"> Link 5.4.4.4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    </ul>
+                    </li>
+                    <!--End Start dropdown menu-->
+                    <!--Start dropdown mega menu-->
+
+                    <!--End dropdown mega menu-->
+
+                </ul>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="material-icons">chat</i>
+                            <span class="label label-danger">9</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li class="rad-dropmenu-header"><a href="#">New Messages</a></li>
+                            <li>
+                                <a href="#" class="rad-content">
+                                    <div class="inbox-item">
+                                        <div class="inbox-item-img"><img src="{% static 'admin panel/images/avatar2.png' %}" class="img-circle" alt=""></div>
+                                        <strong class="inbox-item-author">Ashif Arafath</strong>
+                                        <span class="inbox-item-date">-04:40 PM</span>
+                                        <p class="inbox-item-text">Our financial settlement was ok</p>
+                                        <span class="profile-status available pull-right"></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="rad-content">
+                                    <div class="inbox-item">
+                                        <div class="inbox-item-img"><img src="{% static 'admin panel/images/avatar2.png' %}" class="img-circle" alt=""></div>
+                                        <strong class="inbox-item-author">Ashique Prabhu</strong>
+                                        <span class="inbox-item-date">-11:38 PM</span>
+                                        <p class="inbox-item-text">Upcoming Plans ?</p>
+                                        <span class="profile-status away pull-right"></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="rad-content">
+                                    <div class="inbox-item">
+                                        <div class="inbox-item-img"><img src="{% static 'admin panel/images/avatar2.png' %}" class="img-circle" alt=""></div>
+                                        <strong class="inbox-item-author">RikashRazik</strong>
+                                        <span class="inbox-item-date">-12:55 PM</span>
+                                        <p class="inbox-item-text">What about new clients ?</p>
+                                        <span class="profile-status busy pull-right"></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="rad-content">
+                                    <div class="inbox-item">
+                                        <div class="inbox-item-img"><img src="{% static 'admin panel/images/avatar2.png' %}" class="img-circle" alt=""></div>
+                                        <strong class="inbox-item-author">Shine t.v</strong>
+                                        <span class="inbox-item-date">-09:12 PM</span>
+                                        <p class="inbox-item-text">How is our new project ?</p>
+                                        <span class="profile-status offline pull-right"></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="rad-dropmenu-footer"><a href="#">View All messages</a></li>
+                        </ul>
+                        <!-- /.Dropdown-messages -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <!--<i class="ti-flag-alt"></i>-->
+                            <i class="material-icons">flag</i>
+                            <span class="label label-success">4</span>
+                            <!--<i class="ti-angle-down"></i>-->
+                        </a>
+                        <ul class="dropdown-menu dropdown-tasks">
+                            <!--<li class="ui_popover_tooltip"></li>-->
+                            <li class="rad-dropmenu-header"><a href="#">Our Task</a></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p><strong>Event 1</strong>
+                                            <span class="pull-right sm-text">100% Complete</span></p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                                <span class="sr-only">100% Complete (success)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p><strong>Event 2</strong>
+                                            <span class="pull-right sm-text">20% Complete</span></p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p><strong>Event 3</strong>
+                                            <span class="pull-right sm-text">60% Complete</span></p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                <span class="sr-only">60% Complete (warning)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p><strong>Event 4</strong>
+                                            <span class="pull-right sm-text">80% Complete</span></p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="rad-dropmenu-footer"><a href="#">See All Tasks</a></li>
+                        </ul>
+                        <!-- /.Dropdown-tasks -->
+                    </li>
+                    <!-- /.Dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="material-icons">add_alert</i>
+                            <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            <!--<i class="ti-announcement"></i>-->
+                            <!--<i class="ti-angle-down"></i>-->
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <!--<li class="ui_popover_tooltip"></li>-->
+                            <li class="rad-dropmenu-header"><a href="#">Our Notifications</a></li>
+                            <li>
+                                <a class="rad-content" href="#">
+                                    <div class="pull-left"><i class="fa fa-meetup fa-2x color-red"></i>
+                                    </div>
+                                    <div class="rad-notification-body">
+                                        <div class="lg-text">Introduction to fetch()</div>
+                                        <div class="sm-text">The fetch API</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rad-content" href="#">
+                                    <div class="pull-left"><i class="fa fa-bitbucket fa-2x color-violet"></i>
+                                    </div>
+                                    <div class="rad-notification-body">
+                                        <div class="lg-text">Check your BitBucket</div>
+                                        <div class="sm-text">Last Chance</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rad-content" href="#">
+                                    <div class="pull-left"><i class="fa fa-google fa-2x color-info"></i>
+                                    </div>
+                                    <div class="rad-notification-body">
+                                        <div class="lg-text">Google Account</div>
+                                        <div class="sm-text"><span class="__cf_email__" data-cfemail="781d00191508141d381f15191114561b1715">[email&#160;protected]</span></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rad-content" href="#">
+                                    <div class="pull-left"><i class="fa fa-etsy fa-2x color-green"></i>
+                                    </div>
+                                    <div class="rad-notification-body">
+                                        <div class="lg-text"> Notification</div>
+                                        <div class="sm-text">Expire soon</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="rad-dropmenu-footer"><a href="#">See all notifications</a></li>
+                        </ul>
+                        <!-- /.dropdown-alerts -->
+                        <!-- /.dropdown-alerts -->
+                    </li>
+                    <!-- /.Dropdown -->
+                    <li class="dropdown">
+
+
+                    </li>
+                    <!-- /.Dropdown -->
+                    <li class="log_out">
+                        <a href="/userl">
+                            <i class="material-icons">power_settings_new</i>
+                        </a>
+                    </li>
+                    <!-- /.Log out -->
+                </ul>
+                <!-- /.navbar-top-links -->
+            </div>
+        </nav>
+        <!-- /.Navigation -->
+        <div class="sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+
+                    <li class="active"><a href="/userdashboard" class="material-ripple"><i class="material-icons">home</i> DASHBOARD</a></li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">event</i>EVENT<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/uevent">Add Event</a></li>
+                        
+                        </ul>
+
+                    </li>
+                   
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">history</i>PAST EVENT<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/upast">Past Events</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">bookmark</i>BOOKING<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/ubookdetail">Booking Detail</a></li>
+                
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons">person</i>PROFILE<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/uprofile">Profile</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons">lock</i>PURCHASE PLAN<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/upurchase">Purchase</a></li>
+                            
+                        </ul>
+                    </li>
+                 
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons">call</i>ADMIN CONTACT<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/adminavailable">Available admin</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons">feed</i>TRENDING NEWS<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/storyfeed">News Feed</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons">image</i>IMAGE GALLERY<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/eimage">Event Images</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+          
+       
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.Left Sidebar-->
+        <div class="side-bar right-bar">
+            <div class="">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs right-sidebar-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="material-icons">home</i></a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="material-icons">person_add</i></a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i class="material-icons">chat</i></a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade  in active" id="home">
+                        <ul id="styleOptions" title="switch styling">
+                            <li><b>Dark Skin</b></li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-blue.min"><img src="{% static 'admin panel/dist/img/theme-color/1.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-dark.min"><img src="{% static 'admin panel/dist/img/theme-color/2.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-red-light.min" class="skin-logo"><img src="{% static 'admin panel/dist/img/theme-color/5.jpg' %}" alt="" /></a>
+                            </li>
+                            <li><b>Dark Skin sidebar</b></li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-default.min"><img src="{% static 'admin panel/dist/img/theme-color/7.jpg' %}" alt="" /> </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-red-dark.min"><img src="{% static 'admin panel/dist/img/theme-color/6.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-dark-1.min"><img src="{% static 'admin panel/dist/img/theme-color/8.jpg' %}" alt="" /></a>
+                            </li>
+                            <li><b>Light Skin sidebar</b></li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-default-light.min" class="skin-logo"><img src="{% static 'admin panel/dist/img/theme-color/3.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-white.min"><img src="{% static 'admin panel/dist/img/theme-color/4.jpg' %}" alt="" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade " id="profile">
+                        <h3 class="sidebar-heading">Activity</h3>
+                        <div class="rad-activity-body">
+                            <div class="rad-list-group group">
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-red pull-left"><i class="fa fa-phone"></i></div>
+                                    <div class="rad-list-content"><strong>Client meeting</strong>
+                                        <div class="md-text">Meeting at 10:00 AM</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-yellow pull-left"><i class="fa fa-refresh"></i></div>
+                                    <div class="rad-list-content"><strong>Created ticket</strong>
+                                        <div class="md-text">Ticket assigned to Dev team</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-primary pull-left"><i class="fa fa-check"></i></div>
+                                    <div class="rad-list-content"><strong>Activity completed</strong>
+                                        <div class="md-text">Completed the dashboard html</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-green pull-left"><i class="fa fa-envelope"></i></div>
+                                    <div class="rad-list-content"><strong>New Invitation</strong>
+                                        <div class="md-text">Max has invited you to join Inbox</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.sidebar-menu -->
+                        <h3 class="sidebar-heading">Tasks Progress</h3>
+                        <ul class="sidebar-menu">
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task one
+                                        <span class="label label-danger pull-right">40%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 40%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task two
+                                        <span class="label label-success pull-right">20%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 20%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task Three
+                                        <span class="label label-warning pull-right">60%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 60%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task four
+                                        <span class="label label-primary pull-right">80%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-primary progress-bar-striped active" style="width: 80%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.sidebar-menu -->
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade " id="messages">
+                        <div class="message_widgets">
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="assets/dist/img/avatar.png" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Naeem Khan</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="assets/dist/img/avatar2.png" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Sala Uddin</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status away pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="assets/dist/img/avatar3.png" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Mozammel</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status busy pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="assets/dist/img/avatar4.png" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Tanzil</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status offline pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="assets/dist/img/avatar5.png" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Amir Khan</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="assets/dist/img/avatar.png" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Salman Khan</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="assets/dist/img/avatar.png" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Tahamina</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="assets/dist/img/avatar4.png" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Jhon</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status offline pull-right"></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Right Sidebar -->
+        <div class=control-sidebar-bg></div>
+        <div id=page-wrapper>
+            <div class=content>
+                <div class=content-header>
+                    <strong><em>
+                        <font style="font-family:Verdana, Geneva, Tahoma, sans-serif">
+                            <h1><marquee>WELCOME 
+                                <font style="color: tomato; text-transform:uppercase;">{{users_dis.Username}}</marquee></h1>
+                            </font>
+                        </font>
+                   
+                    </em>
+                    </strong>
+                    <hr>
+                    
+                    <h3 style="font-weight: bold;color: green;">{{users_dis.Username}}<h4>DASHBOARD PANEL</h3></h4> 
+                
+
+                    
+                </div>
+                
+                <!-- Sparklines head-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                        <!-- statistic box -->
+                        <div class="statistic-box statistic-filled-3">
+                            <h2><span class="count-number">12</span><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i></span> </h2>
+                            <div class="small">Active Events</div>
+                            <i class="ti-user statistic_icon" style="color: white;"></i>
+
+                        </div>
+                        <!-- /. statistic box -->
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                        <!-- statistic box -->
+                        <div class="statistic-box statistic-filled-1">
+                            <h2><span class="count-number">53</span><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i></span> </h2>
+                            <div class="small">Total Event</div>
+                            <i class="ti-server statistic_icon" style="color: white;"></i>
+
+                        </div>
+                        <!-- /. statistic box -->
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                        <!-- statistic box -->
+                        <div class="statistic-box statistic-filled-4">
+                            <h2><span class="count-number">259</span><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i></span> </h2>
+                            <div class="small">Total Booking</div>
+                            <i class="ti-bookmark statistic_icon" style="color: white;"></i>
+
+                        </div>
+                        <!-- /. statistic box -->
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                        <!-- statistic box -->
+                        <div class="statistic-box statistic-filled-2">
+                            <h2><span class="count-number">10</span><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i></span> </h2>
+                            <div class="small">Clients</div>
+                            <i class="ti-user statistic_icon" style="color: white;"></i>
+
+                        </div>
+                        <!-- /. statistic box -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                        <!-- statistic box -->
+                        <div class="statistic-box statistic-filled-2">
+                            <h2><span class="count-number">6</span><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i></span> </h2>
+                            <div class="small">Active Services</div>
+                            <i class="ti-face-smile statistic_icon" style="color: white;"></i>
+
+                        </div>
+                        <!-- /. statistic box -->
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                        <!-- statistic box -->
+                        <div class="statistic-box statistic-filled-3">
+                            <h2><span class="count-number">53</span><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i></span> </h2>
+                            <div class="small">Events Completed</div>
+                            <i class="ti-check statistic_icon" style="color: white;"></i>
+
+                        </div>
+                        <!-- /. statistic box -->
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                        <!-- statistic box -->
+                        <div class="statistic-box statistic-filled-1">
+                            <h2><span class="count-number">9</span><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i></span> </h2>
+                            <div class="small">New Request</div>
+                            <i class="ti-mobile statistic_icon" style="color: white;"></i>
+
+                        </div>
+                        <!-- /. statistic box -->
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                        <!-- statistic box -->
+                        <div class="statistic-box statistic-filled-4">
+                            <h2><span class="count-number">64</span><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i></span> </h2>
+                            <div class="small">Award</div>
+                            <i class="ti-cup statistic_icon" style="color: white;"></i>
+
+                        </div>
+                        <!-- /. statistic box -->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static 'admin panel/plugins/jQuery/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/jquery-ui-1.12.1/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'admin panel/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/metisMenu/metisMenu.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/lobipanel/lobipanel.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/animsition/js/animsition.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/fastclick/fastclick.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/slimScroll/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/toastr/toastr.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/sparkline/sparkline.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/counterup/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/counterup/waypoints.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/emojionearea/emojionearea.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/monthly/monthly.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/amcharts/amcharts.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/amcharts/ammap.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/amcharts/worldLow.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/amcharts/serial.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/amcharts/export.min.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/amcharts/light.js' %}"></script>
+    <script src="{% static 'admin panel/plugins/amcharts/pie.js' %}"></script>
+    <script src="{% static 'admin panel/dist/js/app.min.js' %}"></script>
+    <script src="{% static 'admin panel/dist/js/page/dashboard.min.js' %}"></script>
+    <script src="{% static 'admin panel/dist/js/jQuery.style.switcher.min.js' %}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+</body>
+
+<!-- Mirrored from thememinister.com/Worksbot/theme/Worksbot_v2.0/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Feb 2021 09:45:46 GMT -->
+
+</html>

@@ -1,0 +1,592 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>KLABBER | Top Sports Stories</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="{% static 'user panel/newsfeed/css/base.css' %}">
+   <link rel="stylesheet" href="{% static 'user panel/newsfeed/css/vendor.css' %}">  
+   <link rel="stylesheet" href="{% static 'user panel/newsfeed/css/main.css' %}">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="shortcut icon" href="{% static 'user panel/images/k.png' %}" type="image/x-icon">
+        
+
+   <!-- script
+   ================================================== -->
+	<script src="{% static 'user panel/newsfeed/js/modernizr.js' %}"></script>
+	<script src="{% static 'user panel/newsfeed/js/pace.min.js' %}"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="{% static 'user panel/newsfeed/sports stories/images/k.png' %}" type="image/x-icon">
+	<link rel="icon" href="{% static 'user panel/newsfeed/sports stories/images/k.png' %}" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header class="short-header">   
+
+   	<div class="gradient-block"></div>	
+
+   	<div class="row header-content">
+
+   		<div class="logo">
+	         <a href="/uevent">Author </a><center><strong><em>
+				
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+		
+					
+					
+
+															
+			
+		   </nav>
+			 <!-- end main-nav-wrap -->
+			<br><br>
+			<style>
+			.triggers a:link, .triggers a:visited {
+				background-color: white;
+				color: black;
+				border: 2px solid aquamarine;
+				padding: 2px 5px;
+				margin-left: 250pt;
+				text-align: right;
+				text-decoration: lightcoral;
+				
+			}
+			.triggers a:hover, .triggers a:active {
+				background-color:black;
+				color: white;
+			}
+			</style>
+			<div class="triggers">
+				<a class="search-trigger" href="#"><i class="fa fa-search">Search here</i></a>
+			
+			</div>
+		   </nav> <!-- end triggers -->	
+
+			<div class="search-wrap">
+				
+				<form role="search" method="get" class="search-form" action="#">
+					<label>
+						<span class="hide-content">Search for:</span>
+						<input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:" autocomplete="off">
+					</label>
+					<input type="submit" class="search-submit" value="Search">
+				</form>
+
+				<a href="#" id="close-search" class="close-btn">Close</a>
+
+			</div> <!-- end search wrap -->	
+           
+   		
+   	</div>     		
+   	
+   </header> <!-- end header -->
+
+
+   <!-- masonry
+   ================================================== -->
+   <section id="bricks">
+
+   	<div class="row masonry">
+
+   		<!-- brick-wrapper -->
+         <div class="bricks-wrapper">
+
+         	<div class="grid-sizer"></div>
+
+         	<div class="brick entry featured-grid animate-this">
+         		<div class="entry-content">
+         			<div id="featured-post-slider" class="flexslider">
+			   			<ul class="slides">
+
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url({% static 'user panel/newsfeed/images/cr2.png' %});"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+								   		<ul class="entry-meta">
+												<li>June 26, 2021</li> 
+												<li><a href="#" >Budapest</a></li>				
+											</ul>	
+
+								   		<h1 class="slide-title"><a href="#" title="">Ronaldo Equals World Record</a></h1> 
+								   	</div> 				   					  
+				   			
+				   				</div>
+				   			</li> <!-- /slide -->
+
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url({% static 'user panel/newsfeed/images/messi2.png' %});"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+								   		<ul class="entry-meta">
+												<li>June 30, 2016</li>
+												<li><a href="#">Camp Nou</a></li>					
+											</ul>	
+
+								   		<h1 class="slide-title"><a href="#" title="">Lionel Messi Set to Become Free Agent; Barcelona Confident of New Contract</a></h1>
+						   			</div>		   				   					  
+				   			
+				   				</div>
+				   			</li> <!-- /slide -->
+
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url({% static 'user panel/newsfeed/images/d1.jpeg' %});"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+								   		<ul class="entry-meta">
+												<li>June 30, 2021</li>
+												<li><a href="#" class="author">Naruto Uzumaki</a></li>					
+											</ul>	
+
+								   		<h1 class="slide-title"><a href="#" title="">'Dhoni didn't let anyone feel insecure in the team, he didn't make changes'</a></h1>
+						   			</div>
+
+				   				</div>
+				   			</li> <!-- end slide -->
+
+				   		</ul> <!-- end slides -->
+				   	</div> <!-- end featured-post-slider -->        			
+         		</div> <!-- end entry content -->         		
+         	</div>
+
+         	<article class="brick entry format-standard animate-this">
+
+               <div class="entry-thumb">
+                  <a href="#" class="thumb-link">
+	                  <img src="{% static 'user panel/newsfeed/images/serena out.jpeg' %}" alt="building">             
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Serena</a> 
+               				<a href="#">Wimbeldon</a>               				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">Serena Williams out of Wimbledon after stopping with injury</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+	                              
+					  Serena Williams is out of Wimbledon after she stopped playing her first-round match in the first set Tuesday because of a left leg injury.
+
+					  The 23-time Grand Slam champion was serving in the fifth game at Centre Court when she lost her footing near the baseline while hitting a forehand against Aliaksandra Sasnovich.
+					  
+					  
+					   
+					  Williams winced and stepped gingerly between points, clearly troubled. After dropping that game, she took a medical timeout and tried to continue playing.
+						</div>
+               </div>
+
+        		</article> <!-- end article -->
+
+            <article class="brick entry format-standard animate-this">
+
+               <div class="entry-thumb">
+                  <a href="#" class="thumb-link">
+	                  <img src="{% static 'user panel/newsfeed/images/t20 news.jpeg' %}" alt="ferris wheel">                   
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">t20 World Cup</a> 
+               				<a href="#">UAE</a>                			
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">T20 World Cup to be held from Oct 17-Nov 14: ICC</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							The T20 World Cup scheduled to be held in India is being shifted to the UAE owing to the health safety concerns posed by COVID-19, BCCI President Sourav Ganguly told PTI on Monday, ending weeks of speculation surrounding the mega-event in October-November.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+            <!-- format audio here -->
+            <article class="brick entry format-audio animate-this">
+
+               <div class="entry-thumb">
+                  <a href="#" class="thumb-link">
+	                  <img src="{% static 'user panel/newsfeed/images/brazil.jpeg' %}" alt="concert">                      
+                  </a>
+
+                  <div class="audio-wrap">
+                  	<audio id="player" src="{% static 'user panel/newsfeed/media/AirReview-Landmarks-02-ChasingCorporate.mp3' %}" width="100%" height="42" controls="controls"></audio>                  	
+                  </div>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Euro 2020</a> 
+               				<a href="#">Brazil</a>                				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">Ecuador holds Brazil to 1-1 draw, advances at Copa America</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Ecuador held a below-strength Brazil to a 1-1 draw on Sunday to secure a spot in the Copa America quarterfinals. Neymar, defender Thiago Silva and striker Gabriel Jesus didn’t play against Ecuador at the Olimpico Stadium in Goiania. The draw moved Ecuador to fourth spot in Group B, eliminating Venezuela and likely setting up a quarterfinal match against Argentina. Brazil had already secured top spot in the group before the match began, allowing coach Tite to continue testing his lineup with an eye on the 2022 World Cup in Qatar.
+						</div>
+               </div>
+               
+        		</article> <!-- /article -->
+
+         	<article class="brick entry format-quote animate-this" >
+
+               <div class="entry-thumb">                  
+	               <blockquote>
+	                 	<p>Most people give up just when they’re about to achieve success. They quit on the one yard line. They give up at the last minute of the game one foot from a winning touchdown.</p>
+
+	                 	<cite>Ross Perot</cite> 
+	               </blockquote>	          
+               </div>   
+
+        		</article> <!-- end article -->
+
+         	<article class="brick entry animate-this">
+
+               <div class="entry-thumb">
+                  <a href="#" class="thumb-link">
+	                  <img src="{% static 'user panel/newsfeed/images/england.jpeg' %}" alt="Shutterbug">                      
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Euro 2020</a> 
+               				<a href="#">Football</a>                				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">Euro 2020: England, Ukraine advance, as Germany rue missed chances</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Aided by goals from Raheem Sterling and Harry Kane, England defeated Germany to reach the Euro 2020 quarter-finals where they will face Ukraine. There were many firsts to the game. This was the first time England has ever knocked out rivals Germany since the 1966 World Cup final. It was England's first ever knockout round win at the Euros inside 90 minutes. It was also woefully out-of-form striker Harry Kane's first goal in the tournament.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+            <article class="brick entry animate-this" >
+
+               <div class="entry-thumb">
+                  <a href="#" class="thumb-link">
+	                  <img src="{% static 'user panel/newsfeed/images/serena tokyo.jpeg' %}" alt="USAF rocket">                      
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Tokyo</a> 
+               				<a href="#">Serena</a>               				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">Serena Williams says she won’t be attending Tokyo Olympics.</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Four-time American gold medallist Serena Williams has announced that she will not be travelling to Tokyo for this year’s Olympics, saying she was not on the Olympic list and that she did not feel like attending the Games.
+Speaking at a pre-Wimbledon press conference on Sunday, Williams said, “I’m actually not on the Olympic list–not that I’m aware of. If so, then I shouldn’t be on it.”
+
+She added, “There’s a lot of reasons that I made my Olympic decision. I don’t feel like going into them today. Maybe another day. Sorry.”
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->        	
+
+        		<article class="brick entry format-gallery group animate-this">
+
+               <div class="entry-thumb">
+
+                  <div class="post-slider flexslider">
+							<ul class="slides">
+								<li>
+									<img src="{% static 'user panel/newsfeed/images/gill2.jpeg' %}"> 
+								</li>
+								<li>
+									<img src="{% static 'user panel/newsfeed/images/gill3.jpeg' %}"> 
+								</li>
+								<li>
+									<img src="{% static 'user panel/newsfeed/images/gill4.jpeg' %}"> 
+								</li>
+							</ul>							
+						</div> 
+
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">Cricket</a> 
+               				<a href="#">Gill</a>               				
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">Injured Shubman Gill could miss England series, Abhimanyu Easwaran likely in main squad</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							indian opener shubhman gill miss the entire five test series against england. There is a chance to standby Abhimanyu ishwaran to the main indian squad. It is believed that punjab batsman has either sustained calf muscele injury or harmstring tear which could considerable time to heal.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+        		<article class="brick entry format-link animate-this">
+
+               <div class="entry-thumb">
+                  <div class="link-wrap">
+	                 	<p>Somewhere behind the athlete you’ve become and the hours of practice and the coaches who have pushed you is a little girl who fell in love with the game and never looked back… play for her.</p>
+	                 	<cite>
+	                 		<a target="_blank" href="#">- Mia Hamn -</a>
+	                 	</cite>
+	               </div>	
+               </div>               
+               
+        		</article> <!-- end article -->
+
+
+         	<article class="brick entry animate-this">
+
+               <div class="entry-thumb">
+                  <a href="#" class="thumb-link">
+	                  <img src="{% static 'user panel/newsfeed/images/mithaliraj.jpeg' %}" alt="Pattern">              
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">England</a> 
+               				<a href="#">Cricket</a>                			
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">England vs India Women: Mithali Raj suffers neck pain after 2nd successive fifty in 2nd ODI, misses 2nd innings</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							The Board of Control for Cricket in India (BCCI) confirmed that Mithali had suffered pain in her neck and did not come out to lead the side when India were defending the par total at the County Ground. Vice-captan Harmanpreet Kaur led the team.
+
+"Captain Mithali Raj has pain in her neck and will not take the field. Vice-captain Harmanpreet Kaur will lead the team in Mithali’s absence. Radha Yadav is the substitute fielder," BCCI said in a social media post.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+        		<article class="brick entry format-video animate-this">
+
+               <div class="entry-thumb video-image">
+                  <a href="https://www.youtube.com/watch?v=w15FA8CnID0&amp;byline=0&amp;portrait=0&amp;color=F64B39" data-lity>
+	                  <img src="{% static 'user panel/newsfeed/images/cr.jpeg' %}" alt="bokeh">                   
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">CR7</a> 
+               				<a href="#">Football</a>               			
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">Cristiano Ronaldo Transfer News: Portugal Captain Not Negotiating New Deal With Juventus</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							The latest Juventus transfer news is that Cristiano Ronaldo will reportedly make a decision on his future imminently after Belgium eliminated his Portugal side in the Euro 2020 Round of 16. The Portugal captain has been linked with a move away from Turin for a while now as Juventus also are reportedly struggling with financial issues. The 36-year-old, whose contract expires with Juventus in the summer of 2022, has been linked with both Paris Saint-Germain and Manchester United in recent weeks.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+        		<article class="brick entry animate-this">
+
+               <div class="entry-thumb">
+                  <a href="#" class="thumb-link">
+	                  <img src="{% static 'user panel/newsfeed/images/msd.jpeg' %}" alt="Lighthouse">                      
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">M S Dhoni</a> 
+               				<a href="#">Bhuvneshwar</a>
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">Bhuvneshwar Kumar explains why MS Dhoni will always be special to him: He helps others, guides youngsters</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							Indian pacer Bhuvneshwar Kumar on Wednesday explained why MS Dhoni will always be special to him and why he shared a heartfelt post for his former captain last year.
+
+
+The BCCI shared the video on Twitter with the caption, “Today on #SocialMediaDay, @BhuviOfficial relives some of his favourite Insta memories. Bhuvi talking about @msdhoni & his beloved dog is all heart.” Bhuvneshwar cherished some special ones including a post dedicated to MS Dhoni.
+
+“I think I posted that on his retirement. Everyone knows what kind of a player he is. But I posted to explain what kind of human being he is. He always helps others. If you speak to anybody about Dhoni, they will all tell you about how helpful he is. He always gives guidance to all the youngsters,” said Bhuvneshwar in the video posted by the BCCI.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+        		<article class="brick entry animate-this">
+
+               <div class="entry-thumb">
+                  <a href="#" class="thumb-link">
+	                  <img src="{% static 'user panel/newsfeed/images/yana.jpeg' %}" alt="Liberty">                      
+                  </a>
+               </div>
+
+               <div class="entry-text">
+               	<div class="entry-header">
+
+               		<div class="entry-meta">
+               			<span class="cat-links">
+               				<a href="#">French</a> 
+               				<a href="#">Open</a>                	
+               			</span>			
+               		</div>
+
+               		<h1 class="entry-title"><a href="#">Yana Sizikova arrested for alleged match-fixing at 2020 French Open</a></h1>
+               		
+               	</div>
+						<div class="entry-excerpt">
+							A Russian tennis player was busted for an alleged match-fixing fraud in which she deliberately lost a doubles game at the French Open, authorities said Friday.
+
+Yana Sizikova — ranked No. 89 for doubles by the Women’s Tennis Association last year — was arrested at the tournament in Paris on Thursday and charged with “sports bribery and organized fraud” for a game she played in September, the Paris prosecutor’s office said.
+
+An investigation was opened in October by a French police unit that centered on suspicious betting patterns in the first round of a women’s doubles match at the French Open on Sept. 30, officials said.
+						</div>
+               </div>
+               
+        		</article> <!-- end article -->
+
+         </div> <!-- end brick-wrapper --> 
+
+   	</div> <!-- end row -->
+
+   	<div class="row">
+   		
+   		<nav class="pagination">
+		      <span class="page-numbers prev inactive">Prev</span>
+		   	<span class="page-numbers current">1</span>
+		   	<a href="#" class="page-numbers">2</a>
+		      <a href="#" class="page-numbers">3</a>
+		      <a href="#" class="page-numbers">4</a>
+		      <a href="#" class="page-numbers">5</a>
+		      <a href="#" class="page-numbers">6</a>
+		      <a href="#" class="page-numbers">7</a>
+		      <a href="#" class="page-numbers">8</a>
+		      <a href="#" class="page-numbers">9</a>
+		   	<a href="#" class="page-numbers next">Next</a>
+	      </nav>
+
+   	</div>
+
+   </section> <!-- end bricks -->
+
+   
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+   	 <!-- end footer-main -->
+
+      <div class="footer-bottom">
+      	<div class="row">
+
+      		<div class="col-twelve">
+	      		<div class="copyright">
+		         	<span>© Copyright Right 2021</span> 
+		         	<span>Design by <a href="#">KLABBER CREATIVE TEAM</a></span>		         	
+		         </div>
+
+		         <div id="go-top">
+		            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
+		         </div>         
+	      	</div>
+
+      	</div> 
+      </div> <!-- end footer-bottom -->  
+
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="{% static 'user panel/newsfeed/js/jquery-2.1.3.min.js' %}"></script>
+   <script src="{% static 'user panel/newsfeed/js/plugins.js' %}"></script>
+   <script src="{% static 'user panel/newsfeed/js/jquery.appear.js' %}"></script>
+   <script src="{% static 'user panel/newsfeed/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+@import url("../../plugins/jquery-ui-1.12.1/jquery-ui.min.css");
+@import url("../../bootstrap/css/bootstrap.min.css");
+/*@import url("../../bootstrap-rtl/bootstrap-rtl.min.css");*/ 
+@import url("../../plugins/metisMenu/metisMenu.min.css");
+@import url("../../plugins/animsition/css/animsition.min.css");
+@import url("../../plugins/lobipanel/lobipanel.min.css");
+@import url("../../material_icons/materia_icons.css");
+@import url("../../themify-icons/themify-icons.min.css");
+@import url("../../font-awesome/css/font-awesome.min.css");
+@import url("../../pe-icon-7-stroke/css/pe-icon-7-stroke.min.css");
+@import url("app.css");

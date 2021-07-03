@@ -1,0 +1,597 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from thememinister.com/Worksbot/theme/Worksbot_v2.0/form_wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Feb 2021 09:46:38 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Payment mode</title>
+    <link rel="shortcut icon" href="{% static 'admin panel/dist/img/ico/favicon.png' %}" type="image/x-icon">
+    <script src="../../../../ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <link rel="shortcut icon" href="{% static 'user panel/images/k.png' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'payment/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'payment/font-awesome/css/font-awesome.min.css' %}">
+    <script type="text/javascript" src="{% static 'payment/js/jquery-1.10.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'payment/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i', 'Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i', 'Open Sans']
+            }
+        });
+    </script>
+
+    <!-- START GLOBAL MANDATORY STYLE -->
+    <link href="{% static 'admin panel/dist/css/base.css' %}" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- START PAGE LABEL PLUGINS -->
+    <link href="{% static 'admin panel/plugins/dropzone/dropzone.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- START THEME LAYOUT STYLE -->
+    <link href="{% static 'admin panel/dist/css/component_ui.min.css' %}" rel="stylesheet" type="text/css" />
+    <link id="defaultTheme" href="{% static 'admin panel/dist/css/skins/skin-dark-1.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin panel/dist/css/custom.css' %}" rel="stylesheet" type="text/css" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="{% static 'user panel/dist/js/ss.js' %}"></script>
+    <link href="{% static 'admin panel/dist/pay style/payment.css' %}" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper animsition">
+        <!-- Navigation -->
+        <nav class="navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="material-icons">apps</i>
+                </button>
+                <a class="navbar-brand" href="/home">
+                    <img class="main-logo" src="{% static 'admin panel/dist/img/k10.png' %}" alt="">
+                    <!--<span>Worksbot</span>-->
+                </a>
+            </div>
+            <div class="nav-container">
+                <!-- /.navbar-header -->
+                <ul class="nav navbar-nav hidden-xs">
+
+                    <!-- /.Fullscreen -->
+
+                    <!-- /.Full page search -->
+
+                    <!-- /.Sidebar menu toggle icon -->
+                    <!--Start dropdown menu-->
+
+                    <!--End Start dropdown menu-->
+                    <!--Start dropdown mega menu-->
+
+
+
+                </ul>
+                <ul class="nav navbar-top-links navbar-right">
+
+
+
+                    <!-- /.Dropdown -->
+
+                    <li class="log_out">
+                        <a href="/userl">
+                            <i class="material-icons">power_settings_new</i>
+                        </a>
+                    </li>
+                    <!-- /.Log out -->
+                </ul>
+                <!-- /.navbar-top-links -->
+            </div>
+        </nav>
+        <!-- /.Navigation -->
+        <div class="sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-heading "> <span>Main Navigation</span></li>
+                    <li class="active"><a href="/userdashboard" class="material-ripple"><i class="material-icons">home</i> DASHBOARD</a></li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">event</i>EVENT<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/uevent">Add Event</a></li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">history</i>PAST EVENT<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/upast">Past Events</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">bookmark</i>BOOKING<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/ubookdetail">Booking Detail</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#" class="material-ripple"><i class="material-icons">person</i>PROFILE<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li class="active"><a href="/uprofile">Profile</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons">lock</i>PURCHASE PLAN PAGE<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/upurchase">Purchase Plan</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons">call</i>ADMIN CONTACT<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/adminavailable">Available Admin</a></li>
+                        </ul>
+                    </li>
+                   
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons">feed</i>TRENDING NEWS<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/storyfeed">News Feed</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="material-ripple"><i class="material-icons ">image</i>IMAGES<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                           
+                            <li><a href="/eimage">Event Image</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.Left Sidebar-->
+        <div class="side-bar right-bar">
+            <div class="">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs right-sidebar-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="material-icons">home</i></a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i
+                                class="material-icons">person_add</i></a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i
+                                class="material-icons">chat</i></a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade  in active" id="home">
+                        <ul id="styleOptions" title="switch styling">
+                            <li><b>Dark Skin</b></li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-blue.min"><img src="{% static 'user panel/assets/dist/img/theme-color/1.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-dark.min"><img src="{% static 'user panel/dist/img/theme-color/2.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-red-light.min" class="skin-logo"><img src="{% static 'user panel/dist/img/theme-color/5.jpg' %}" alt="" /></a>
+                            </li>
+                            <li><b>Dark Skin sidebar</b></li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-default.min"><img src="{% static 'user panel//dist/img/theme-color/7.jpg' %}" alt="" /> </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-red-dark.min"><img src="{% static 'user panel/dist/img/theme-color/6.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-dark-1.min"><img src="{% static 'user panel/dist/img/theme-color/8.jpg' %}" alt="" /></a>
+                            </li>
+                            <li><b>Light Skin sidebar</b></li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-default-light.min" class="skin-logo"><img src="{% static 'user panel/dist/img/theme-color/3.jpg' %}" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" data-theme="skin-white.min"><img src="{% static 'user panel/dist/img/theme-color/4.jpg' %}" alt="" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade " id="profile">
+                        <h3 class="sidebar-heading">Activity</h3>
+                        <div class="rad-activity-body">
+                            <div class="rad-list-group group">
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-red pull-left"><i class="fa fa-phone"></i></div>
+                                    <div class="rad-list-content"><strong>Client meeting</strong>
+                                        <div class="md-text">Meeting at 10:00 AM</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-yellow pull-left"><i class="fa fa-refresh"></i></div>
+                                    <div class="rad-list-content"><strong>Created ticket</strong>
+                                        <div class="md-text">Ticket assigned to Dev team</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-primary pull-left"><i class="fa fa-check"></i></div>
+                                    <div class="rad-list-content"><strong>Activity completed</strong>
+                                        <div class="md-text">Completed the dashboard html</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="rad-list-group-item">
+                                    <div class="rad-list-icon bg-green pull-left"><i class="fa fa-envelope"></i></div>
+                                    <div class="rad-list-content"><strong>New Invitation</strong>
+                                        <div class="md-text">Max has invited you to join Inbox</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.sidebar-menu -->
+                        <h3 class="sidebar-heading">Tasks Progress</h3>
+                        <ul class="sidebar-menu">
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task one
+                                        <span class="label label-danger pull-right">40%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 40%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task two
+                                        <span class="label label-success pull-right">20%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 20%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task Three
+                                        <span class="label label-warning pull-right">60%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 60%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h4 class="subheading">
+                                        Task four
+                                        <span class="label label-primary pull-right">80%</span>
+                                    </h4>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-primary progress-bar-striped active" style="width: 80%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.sidebar-menu -->
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade " id="messages">
+                        <div class="message_widgets">
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Naeem Khan</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar2.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Sala Uddin</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status away pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar3.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Mozammel</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status busy pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar4.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Tanzil</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status offline pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar5.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Amir Khan</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Salman Khan</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Tahamina</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status available pull-right"></span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="inbox-item">
+                                    <div class="inbox-item-img"><img src="{% static 'user panel/dist/img/avatar4.png' %}" class="img-circle" alt=""></div>
+                                    <strong class="inbox-item-author">Jhon</strong>
+                                    <span class="inbox-item-date">-13:40 PM</span>
+                                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                                    <span class="profile-status offline pull-right"></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Right Sidebar -->
+        <!-- /.Navbar  Static Side -->
+        <div class="control-sidebar-bg"></div>
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <!-- main content -->
+            <div class="content">
+                <!-- Content Header (Page header) -->
+                <div class="content-header">
+                    <div class="header-icon">
+                        <span class="iconify" data-icon="mdi-bank" data-inline="false"></span>
+
+                    </div>
+                    <div class="header-title">
+                        <h1>QUICK PAY</h1>
+
+                        <ol class="breadcrumb">
+                            <li><a href="/uevent"><i class="pe-7s-home"></i> Home</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /. Content Header (Page header) -->
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="panel panel-bd lobidrag">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Customer Details</h4>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                                        <form action="/Bankpayment" method="post" class="f1">
+                                            {% csrf_token %}
+                                            <h3 class="m-t-0">Add Your Bank</h3>
+                                            <p>Fill in the form to get instant access</p>
+                                            <div class="f1-steps">
+                                                <div class="f1-progress">
+                                                    <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+                                                </div>
+                                                <div class="f1-step active">
+                                                    <div class="f1-step-icon"><i class="fa fa-user"></i></div>
+                                                    <p>about</p>
+                                                </div>
+                                                <div class="f1-step">
+                                                    <div class="f1-step-icon"><i class="fa fa-key"></i></div>
+                                                    <p>Bank account</p>
+                                                </div>
+                                                <div class="f1-step">
+                                                    <div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
+                                                    <p>Make payment</p>
+                                                </div>
+                                            </div>
+                                            <fieldset>
+                                                <h4 class="m-t-0">Tell us who you are:</h4>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="f1-first-name">First name</label>
+                                                    <input type="text" name="f1-first-name" placeholder="First name..." class="form-control" id="f1-first-name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="f1-last-name">Last name</label>
+                                                    <input type="text" name="f1-last-name" placeholder="Last name..." class="form-control" id="f1-last-name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="f1-phone-number">Phone Number</label>
+                                                    <input type="text" name="f1-phone-numbe" placeholder="Enter your 10 digit number..." class="form-control" id="f1-phone-numbe">
+                                                </div>
+                                                <div class="input-group">
+                                                    <input type="email" class="form-control" id="inputEmail" placeholder="Recipient's username" aria-describedby="basic-addon2" required>
+                                                    <span class="input-group-addon" id="basic-addon2">@gmail.com</span>
+                                                </div>
+
+                                                <div class="f1-buttons">
+                                                    <button type="button" class="btn btn-success btn-next">Next</button>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <h4>Set up your account:</h4>
+                                                <div class="icon-addon addon-md input-left-icon">
+                                                    <input type="search" placeholder="Bank name" class="form-control" id="7">
+                                                    <label class="fa fa-spinner fa-spin" title="name"></label>
+                                                </div><br>
+                                                <div class="container">
+                                                    <H4><u>Payment Mode</u></H4>
+                                                    <div class="form-group">
+                                                        <input type="radio" name="f1-payment-credit">Pay through Credit&Debit Cards
+                                                        <BR>
+                                                        <P style="color: red;">Convenience Fee:&#8377;15/-+GST </P>
+                                                        <HR style="height: 2px;border-width: 50%;color: black;background-color: black;width: 50%;text-align: left;margin-left:0">
+                                                        <input type="radio" name="f1-payment-credit">Pay through BHIM/UPI
+                                                        <BR>
+                                                        <P style="color: red;">Convenience Fee:&#8377;10/-+GST </P>
+                                                        <HR style="height: 2px;border-width: 50%;color: black;background-color: black;width: 50%;text-align: left;margin-left:0">
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="f1-buttons">
+                                                    <button type="button" class="btn btn-previous">Previous</button>
+                                                    <button type="button" class="btn btn-success btn-next">Next</button>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+
+
+
+                                                <div class="page-header">
+                                                    <h4>Quick Pay</h4>
+
+                                                    <h3 class="text-center">Payment Details</h3>
+                                                    <img class="img-responsive cc-img" src="http://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                                                </div>
+                                                <div class="panel-body">
+                                                    <form role="form">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="form-group">
+                                                                    <label>CARD NUMBER</label>
+                                                                    <div class="input-group">
+                                                                        <input type="tel" class="form-control" placeholder="Valid Card Number" name="cardnumber" />
+                                                                        <span class="input-group-addon"><span
+                                                                    class="fa fa-credit-card"></span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-7 col-md-7">
+                                                                <div class="form-group">
+                                                                    <label><span class="hidden-xs">EXPIRATION</span><span
+                                                                class="visible-xs-inline">EXP</span> DATE</label>
+                                                                    <input type="tel" class="form-control" placeholder="MM / YY" name="expiration" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-5 col-md-5 pull-right">
+                                                                <div class="form-group">
+                                                                    <label>CV CODE</label>
+                                                                    <input type="tel" class="form-control" placeholder="CVC" name="cvv" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="form-group">
+                                                                    <label>CARD OWNER</label>
+                                                                    <input type="text" class="form-control" placeholder="Card Owner Names" name="cardowner" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <button type="submit" class="btn btn-warning btn-lg btn-block">Process
+                                                    payment</a></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+
+                        <style>
+                            .cc-img {
+                                margin: 0 auto;
+                            }
+                        </style>
+                        <!-- Credit Card Payment Form - END -->
+
+                    </div>
+
+                </div>
+
+                <!-- Credit Card Payment Form - START -->
+
+
+
+
+
+
+
+                <!-- End -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- /.main content -->
+    </div>
+    <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- START CORE PLUGINS -->
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static 'admin panel/plugins/jQuery/jquery-1.12.4.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'admin panel/plugins/jquery-ui-1.12.1/jquery-ui.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'admin panel/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'admin panel/plugins/metisMenu/metisMenu.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'admin panel/plugins/lobipanel/lobipanel.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'admin panel/plugins/animsition/js/animsition.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'admin panel/plugins/fastclick/fastclick.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'admin panel/plugins/slimScroll/jquery.slimscroll.min.js' %}" type="text/javascript"></script>
+    <!-- STRAT PAGE LABEL PLUGINS -->
+    <script src="{% static 'admin panel/plugins/bootstrap-wizard/jquery.backstretch.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'admin panel/plugins/bootstrap-wizard/form.scripts.js' %}" type="text/javascript"></script>
+    <!-- START THEME LABEL SCRIPT -->
+    <!-- START THEME LABEL SCRIPT -->
+    <script src="{% static 'admin panel/dist/js/app.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'admin panel/dist/js/jQuery.style.switcher.min.js' %}" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from thememinister.com/Worksbot/theme/Worksbot_v2.0/dataTables.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Feb 2021 09:46:07 GMT -->
+
+</html>
